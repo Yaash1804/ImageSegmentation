@@ -3,6 +3,7 @@ import sys
 import argparse
 sys.path.append("../")
 sys.path.append("./")
+from guided_diffusion.isicloader import ISICDataset
 from guided_diffusion import dist_util, logger
 from guided_diffusion.resample import create_named_schedule_sampler
 from guided_diffusion.bratsloader import BRATSDataset, BRATSDataset3D

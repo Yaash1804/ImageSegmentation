@@ -351,7 +351,6 @@ def sr_create_model_and_diffusion(
         noise_schedule=noise_schedule,
         use_kl=use_kl,
         predict_xstart=predict_xstart,
-        dpm_solver = dpm_solver,
         rescale_timesteps=rescale_timesteps,
         rescale_learned_sigmas=rescale_learned_sigmas,
         timestep_respacing=timestep_respacing,

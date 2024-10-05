@@ -3,6 +3,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from PIL import Image
+import torchvision.utils as vutils
 
 
 softmax_helper = lambda x: F.softmax(x, 1)
@@ -85,8 +87,8 @@ def export(tar, img_path=None):
     if c == 3:
         vutils.save_image(tar, fp = img_path)
     else:
-        s = th.tensor(tar)[:,-1,:,:].unsqueeze(1)
-        s = th.cat((s,s,s),1)
+        s = torch.tensor(tar)[:,-1,:,:].unsqueeze(1)
+        s = torch.cat((s,s,s),1)
         vutils.save_image(s, fp = img_path)
 
 def norm(t):
